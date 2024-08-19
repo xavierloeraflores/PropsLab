@@ -7,7 +7,6 @@ import {
   navigationMenuTriggerStyle,
 } from "~/components/ui/navigation-menu";
 
-
 export const Header: React.FC = () => {
   return (
     <header className="flex flex-row items-center justify-center border-b-2 border-accent bg-secondary p-4 text-secondary-foreground">
