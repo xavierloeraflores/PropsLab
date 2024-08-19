@@ -17,7 +17,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body>
+      <body className="min-h-screen flex flex-col justify-between">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -25,7 +25,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header/>
-          <main className="flex min-h-screen flex-col items-center justify-center">
+          <main className="flex flex-col items-center justify-center">
             {children}
           </main>
           <Footer />
