@@ -2,7 +2,7 @@ import { cn } from "~/lib/utils";
 import {
   FeatureSectionDescription,
   type FeatureSectionDescriptionProps,
-} from "./feature-section-decription";
+} from "./feature-section-description";
 import {
   FeatureSectionVisual,
   type FeatureSectionVisualProps,
