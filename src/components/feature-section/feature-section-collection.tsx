@@ -10,7 +10,7 @@ export function FeatureSectionCollection({
   className = "",
 }: FeatureSectionCollectionProps & { className?: string }) {
   return (
-    <div className={cn("flex flex-col gap-6", className)}>
+    <div className={cn("flex flex-col gap-20", className)}>
       {collection.map((feature, index) => {
         return (
           <FeatureSection

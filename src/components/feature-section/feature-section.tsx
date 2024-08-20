@@ -23,13 +23,13 @@ export function FeatureSection({
   return (
     <div
       className={cn(
-        "flex flex-col gap-6 bg-black p-6 text-white",
-        reverse ? "flex-row-reverse" : "flex-row",
+        "flex flex-col gap-6 p-6 text-white",
+        reverse ? "sm:flex-row-reverse" : "sm:flex-row",
         className,
       )}
     >
-      <FeatureSectionVisual {...visual} className="flex-1" />
-      <FeatureSectionDescription {...description} />
+      <FeatureSectionVisual {...visual} className="sm:flex-1" />
+      <FeatureSectionDescription {...description} className="sm:flex-1" />
     </div>
   );
 }
