@@ -8,7 +8,7 @@ import {
   type FeatureSectionVisualProps,
 } from "./feature-section-visual";
 
-type FeatureSectionProps = {
+export type FeatureSectionProps = {
   description: FeatureSectionDescriptionProps;
   visual: FeatureSectionVisualProps;
   reverse?: boolean;
