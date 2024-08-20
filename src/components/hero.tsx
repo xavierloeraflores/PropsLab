@@ -27,7 +27,7 @@ export function Hero() {
           </Link>
         </div>
         <Image
-          src="/assets/images/logo/1024x1024/Logo_1024x1024_white.png"
+          src="/assets/images/logo/1024x1024/logo_1024x1024_white.png"
           width={900}
           height={650}
           alt="Hero"
