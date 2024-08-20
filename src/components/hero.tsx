@@ -8,8 +8,10 @@ export function Hero() {
         <div className="flex flex-col justify-center space-y-4">
           <div className="space-y-2">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-              Bet Smarter,
-              <br /> Not Harder
+              Bet <span className="text-primary">Smarter,</span>
+              <br />
+              Not <span className="text-primary">Harder</span>
+              <span className="text-primary">.</span>
             </h1>
             <p className="max-w-[600px] text-muted-foreground md:text-xl">
               We are a community of sports and betting enthusiasts who use
