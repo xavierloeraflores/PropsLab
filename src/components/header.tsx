@@ -1,40 +1,15 @@
 import Link from "next/link";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle,
-} from "~/components/ui/navigation-menu";
 
 export const Header: React.FC = () => {
   return (
-    <header className="flex flex-row items-center justify-center border-b-2 border-accent bg-secondary p-4 text-secondary-foreground">
-      <NavigationMenu>
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <Link href="/" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Home
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href="/team" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                About the Team
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href="/join" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Join
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
+    <header className="fixed left-0 right-0 top-0 flex min-h-16 flex-row items-center justify-between border-b-2 border-accent bg-secondary p-4 px-6 text-secondary-foreground opacity-95 sm:min-h-24">
+      <div>
+        <Link href="/">Home</Link>
+      </div>
+      <div className="ml-auto flex flex-row gap-4">
+        <Link href="/team">About the Team</Link>
+        <Link href="/join">Join</Link>
+      </div>
     </header>
   );
 };
