@@ -13,6 +13,7 @@ export type FeatureSectionProps = {
   visual: FeatureSectionVisualProps;
   reverse?: boolean;
 };
+import { DivContainer } from "../framer-container";
 
 export function FeatureSection({
   description,
@@ -21,15 +22,15 @@ export function FeatureSection({
   className = "",
 }: FeatureSectionProps & { className?: string }) {
   return (
-    <div
+    <DivContainer
       className={cn(
-        "flex flex-col gap-6 p-6 text-white",
+        "flex min-h-96 flex-col gap-6 p-6 text-white",
         reverse ? "sm:flex-row-reverse" : "sm:flex-row",
         className,
       )}
     >
       <FeatureSectionVisual {...visual} className="sm:flex-1" />
       <FeatureSectionDescription {...description} className="sm:flex-1" />
-    </div>
+    </DivContainer>
   );
 }
