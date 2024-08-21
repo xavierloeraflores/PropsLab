@@ -10,7 +10,7 @@ export type TeamMemberProps = {
 
 export function TeamMember({
   name,
-  imageSrc = "/static/images/icon/256x256_white.png",
+  imageSrc = "/static/images/icon/256x256/256x256_white.png",
   title,
   description,
   className,
@@ -22,6 +22,8 @@ export function TeamMember({
           src={imageSrc}
           alt={name}
           className="rounded-full object-cover"
+          width={256}
+          height={256}
         />
       </div>
       <div className="space-y-1">
