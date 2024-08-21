@@ -1,5 +1,6 @@
 import { SectionContainer } from "~/components/framer-container";
-
+import { TeamCollection } from "~/components/team-section/team-collection";
+import { TeamCollectionData } from "~/data/team";
 export default function AboutTheTeam() {
   return (
     <SectionContainer>
@@ -19,7 +20,7 @@ export default function AboutTheTeam() {
             </p>
           </div>
         </div>
-        <TeamMembers />
+        <TeamCollection {...TeamCollectionData} />
       </div>
     </SectionContainer>
   );
