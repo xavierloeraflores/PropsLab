@@ -29,7 +29,7 @@ export function Hero() {
         </div>
         <div className="mx-auto flex-1 sm:w-full">
           <Image
-            src="/assets/images/logo/1024x1024/logo_1024x1024_white.png"
+            src="/static/images/logo/1024x1024/logo_1024x1024_white.png"
             width={900}
             height={650}
             alt="Hero"

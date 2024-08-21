@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const LogoLightSrc = "/assets/images/icon/1024x1024/1024X1024_white.png";
-const LogoDarkSrc = "/assets/images/icon/1024x1024/1024X1024_black.png";
+const LogoLightSrc = "/static/images/icon/1024x1024/1024X1024_white.png";
+const LogoDarkSrc = "/static/images/icon/1024x1024/1024X1024_black.png";
 export function Footer() {
   const isDarkTheme = true;
   return (
