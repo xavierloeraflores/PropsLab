@@ -25,7 +25,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="flex flex-col items-center justify-center">
+          <main className="mt-16 flex flex-col items-center justify-center sm:mt-24">
             {children}
           </main>
           <Footer />
