@@ -19,13 +19,13 @@ const GLOBE_CONFIG: COBEOptions = {
   devicePixelRatio: 2,
   phi: 0,
   theta: 0.3,
-  dark: 0,
-  diffuse: 0.4,
-  mapSamples: 16000,
-  mapBrightness: 1.2,
+  dark: 1.1,
+  diffuse: 0,
+  mapSamples: 8000, //Number of Dots
+  mapBrightness: 1.5,
   baseColor: [1, 1, 1],
-  markerColor: [251 / 255, 100 / 255, 21 / 255],
-  glowColor: [1, 1, 1],
+  markerColor: [28 / 255, 217 / 255, 144 / 255],
+  glowColor: [28 / 255, 217 / 255, 144 / 255],
   markers: [
     { location: [14.5995, 120.9842], size: 0.03 }, // Manila, Philippines
     { location: [19.076, 72.8777], size: 0.1 }, // Mumbai, India
