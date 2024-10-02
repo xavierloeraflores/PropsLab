@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SectionContainer } from "./framer-container";
+import Globe from "./ui/globe";
 
 export function Hero() {
   return (
@@ -27,14 +28,9 @@ export function Hero() {
             Join Now
           </Link>
         </div>
-        <div className="mx-auto flex-1 sm:w-full">
-          <Image
-            src="/static/images/logo/1024x1024/logo_1024x1024_white.png"
-            width={900}
-            height={650}
-            alt="Hero"
-            className="aspect-[9/6] rounded-xl object-cover object-center sm:w-full"
-          />
+        <div className="mx-auto w-full flex-1">
+          {/* 900 x 650 */}
+          <Globe className="relative" />
         </div>
       </div>
     </SectionContainer>
