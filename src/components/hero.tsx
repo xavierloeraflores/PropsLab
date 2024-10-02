@@ -28,7 +28,7 @@ export function Hero() {
             Join Now
           </Link>
         </div>
-        <div className="mx-auto flex-1 sm:w-full">
+        <div className="mx-auto w-full flex-1">
           {/* 900 x 650 */}
           <Globe className="relative" />
         </div>
