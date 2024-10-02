@@ -1,20 +1,12 @@
 import Link from "next/link";
-import Image from "next/image";
+import{ PropsLabLogo} from "./PropsLabLogo";
 
-const LogoLightSrc = "/static/images/icon/1024x1024/1024X1024_white.png";
-const LogoDarkSrc = "/static/images/icon/1024x1024/1024X1024_black.png";
 export function Footer() {
-  const isDarkTheme = true;
   return (
     <footer className="w-full bg-muted py-6 md:py-12">
       <div className="container flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
         <Link href="/" className="flex items-center gap-2" prefetch={false}>
-          <Image
-            src={isDarkTheme ? LogoDarkSrc : LogoLightSrc}
-            width={64}
-            height={64}
-            alt="Props Lab Logo"
-          />
+          <PropsLabLogo />
           <span className="text-lg font-semibold">Props Lab</span>
         </Link>
         <nav className="flex items-center gap-4 sm:gap-6">
