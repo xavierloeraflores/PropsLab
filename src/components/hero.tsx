@@ -10,8 +10,8 @@ export function Hero() {
         <div className="flex flex-1 flex-col justify-center space-y-4">
           <div className="space-y-2">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-              Bet <span className="text-primary">Smarter,</span>
-              <br />
+              Bet <span className="text-primary">Smarter,{"  "}</span>
+              <br className="hidden sm:block" />
               Not <span className="text-primary">Harder</span>
               <span className="text-primary">.</span>
             </h1>
