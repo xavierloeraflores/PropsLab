@@ -2,6 +2,7 @@ import { type FeatureSectionCollectionProps } from "~/components/feature-section
 import { type FeatureSectionProps } from "~/components/feature-section/feature-section";
 import { Feature1 } from "~/components/feature-components/feature1";
 import { Feature2 } from "~/components/feature-components/feature2";
+import { Feature3 } from "~/components/feature-components/feature3";
 
 const feature1: FeatureSectionProps = {
   description: {
@@ -28,7 +29,7 @@ const feature3: FeatureSectionProps = {
     description:
       "Members can have a chance to participate in weekly giveaways where they can potentially win sports prizes and even cash.",
   },
-  visual: { children: <Feature1 /> },
+  visual: { children: <Feature3 /> },
 };
 
 export const FeatureSectionCollectionData: FeatureSectionCollectionProps = {
