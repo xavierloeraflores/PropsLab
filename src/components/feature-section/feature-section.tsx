@@ -25,12 +25,12 @@ export function FeatureSection({
     <DivContainer
       className={cn(
         "flex min-h-96 flex-col gap-6 p-6 text-white",
-        reverse ? "sm:flex-row-reverse" : "sm:flex-row",
+        reverse ? "md:flex-row-reverse" : "md:flex-row",
         className,
       )}
     >
-      <FeatureSectionVisual {...visual} className="sm:flex-1" />
-      <FeatureSectionDescription {...description} className="sm:flex-1" />
+      <FeatureSectionVisual {...visual} className="md:flex-1" />
+      <FeatureSectionDescription {...description} className="md:flex-1" />
     </DivContainer>
   );
 }

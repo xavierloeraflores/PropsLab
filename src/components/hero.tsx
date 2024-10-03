@@ -7,11 +7,11 @@ export function Hero() {
   return (
     <SectionContainer>
       <div className="container flex flex-col-reverse gap-10 px-4 md:flex-row md:gap-6 md:px-6">
-        <div className="flex flex-1 flex-col justify-center space-y-4">
+        <div className="flex flex-1 flex-col items-center justify-center space-y-4">
           <div className="space-y-2">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-              Bet <span className="text-primary">Smarter,</span>
-              <br />
+              Bet <span className="text-primary">Smarter,{"  "}</span>
+              <br className="hidden sm:block" />
               Not <span className="text-primary">Harder</span>
               <span className="text-primary">.</span>
             </h1>

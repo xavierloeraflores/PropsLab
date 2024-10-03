@@ -35,11 +35,11 @@ export function Footer() {
           ) : (
             <Link
               href="https://whop.com/marketplace/props-lab/"
-              className="text-sm font-medium underline-offset-4 hover:underline"
+              className="text-md inline-flex h-10 max-w-[600px] items-center justify-center rounded-md bg-primary px-8 font-bold text-primary-foreground underline-offset-4 shadow-md shadow-primary/80 transition-colors hover:bg-primary/90 hover:underline focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
               prefetch={false}
               target="_blank"
             >
-              Join
+              Join Now
             </Link>
           )}
         </nav>

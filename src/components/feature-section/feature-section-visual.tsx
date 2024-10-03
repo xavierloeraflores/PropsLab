@@ -12,7 +12,7 @@ export function FeatureSectionVisual({
   return (
     <div
       className={cn(
-        "flex min-w-fit flex-col items-center justify-center overflow-hidden",
+        "flex w-full flex-col items-center justify-center overflow-hidden md:max-w-[50vw]",
         className,
       )}
     >

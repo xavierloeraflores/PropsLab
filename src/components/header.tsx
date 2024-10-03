@@ -17,7 +17,11 @@ export const Header: React.FC = () => {
         {joinPageFlag ? (
           <Link href="/join">Join</Link>
         ) : (
-          <Link href="https://whop.com/marketplace/props-lab/" target="_blank">
+          <Link
+            href="https://whop.com/marketplace/props-lab/"
+            target="_blank"
+            className="text-md inline-flex h-10 max-w-[600px] items-center justify-center rounded-md bg-primary px-8 font-bold text-primary-foreground shadow-md shadow-primary/80 transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+          >
             Join Now
           </Link>
         )}
