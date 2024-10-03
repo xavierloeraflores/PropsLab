@@ -5,7 +5,7 @@ export function Feature2() {
     <div className="h-fit max-h-fit w-full max-w-[50vw] p-8">
       <Image
         className="rounded-lg shadow-md shadow-primary"
-        src="/static/images/other/slips.png"
+        src="/static/images/features/slips.png"
         alt="Feature 2"
         width={500}
         height={500}
