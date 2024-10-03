@@ -51,7 +51,13 @@ export function Feature1() {
       >
         <BarChart accessibilityLayer data={chartData}>
           <CartesianGrid vertical={false} />
-          <ChartTooltip content={<ChartTooltipContent />} />
+          <ChartTooltip
+            content={
+              <ChartTooltipContent
+                labelFormatter={(value) => `Game ${value}`}
+              />
+            }
+          />
           <ChartLegend verticalAlign="top" content={<ChartLegendContent />} />
           <XAxis dataKey="game">
             <Label
