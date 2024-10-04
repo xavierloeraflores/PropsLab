@@ -24,12 +24,15 @@ export function FeatureSection({
   return (
     <DivContainer
       className={cn(
-        "flex min-h-96 flex-col gap-6 p-6 text-white",
+        "mb-8 flex min-h-96 max-w-[100vw] flex-col gap-6 px-2 py-6 text-white md:p-6",
         reverse ? "md:flex-row-reverse" : "md:flex-row",
         className,
       )}
     >
-      <FeatureSectionVisual {...visual} className="md:flex-1" />
+      <FeatureSectionVisual
+        {...visual}
+        className="h-fit max-h-fit w-full p-6 md:max-w-[50vw] md:flex-1"
+      />
       <FeatureSectionDescription {...description} className="md:flex-1" />
     </DivContainer>
   );

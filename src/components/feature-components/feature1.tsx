@@ -44,33 +44,29 @@ const chartData = [
 
 export function Feature1() {
   return (
-    <div className="h-fit max-h-fit w-full max-w-[50vw]">
-      <ChartContainer
-        config={chartConfig}
-        className="flex h-fit min-h-[300px] w-full flex-col justify-center"
-      >
-        <BarChart accessibilityLayer data={chartData}>
-          <CartesianGrid vertical={false} />
-          <ChartTooltip
-            content={
-              <ChartTooltipContent
-                labelFormatter={(value) => `Game ${value}`}
-              />
-            }
+    <ChartContainer
+      config={chartConfig}
+      className="flex h-fit min-h-[300px] w-full flex-col justify-center"
+    >
+      <BarChart accessibilityLayer data={chartData}>
+        <CartesianGrid vertical={false} />
+        <ChartTooltip
+          content={
+            <ChartTooltipContent labelFormatter={(value) => `Game ${value}`} />
+          }
+        />
+        <ChartLegend verticalAlign="top" content={<ChartLegendContent />} />
+        <XAxis dataKey="game">
+          <Label
+            value="Strikeouts (Last 7 games)"
+            offset={0}
+            position="insideBottom"
           />
-          <ChartLegend verticalAlign="top" content={<ChartLegendContent />} />
-          <XAxis dataKey="game">
-            <Label
-              value="Strikeouts (Last 7 games)"
-              offset={0}
-              position="insideBottom"
-            />
-          </XAxis>
-          <YAxis></YAxis>
-          <Bar dataKey="tarik" fill="var(--color-tarik)" radius={4} />
-          <Bar dataKey="michael" fill="var(--color-michael)" radius={4} />
-        </BarChart>
-      </ChartContainer>
-    </div>
+        </XAxis>
+        <YAxis></YAxis>
+        <Bar dataKey="tarik" fill="var(--color-tarik)" radius={4} />
+        <Bar dataKey="michael" fill="var(--color-michael)" radius={4} />
+      </BarChart>
+    </ChartContainer>
   );
 }

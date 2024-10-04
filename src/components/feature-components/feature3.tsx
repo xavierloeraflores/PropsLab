@@ -4,11 +4,7 @@ import { cn } from "~/lib/utils";
 import { AnimatedList } from "~/components/ui/animated-list";
 
 export function Feature3() {
-  return (
-    <div className="h-fit max-h-fit w-full max-w-[50vw] p-8">
-      <GiveawayList />
-    </div>
-  );
+  return <GiveawayList />;
 }
 
 interface Item {
@@ -144,7 +140,7 @@ export function GiveawayList({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "relative flex h-[400px] w-full max-w-[600px] flex-col overflow-hidden rounded-lg border bg-background bg-gradient-to-tr from-slate-900 to-primary/40 p-6 shadow-lg shadow-primary",
+        "relative flex h-[400px] w-full max-w-[600px] flex-col overflow-hidden rounded-lg border bg-background bg-gradient-to-tr from-slate-900 to-primary/40 p-6 shadow-md shadow-primary",
         className,
       )}
     >
