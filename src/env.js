@@ -19,8 +19,15 @@ export const env = createEnv({
     // NEXT_PUBLIC_CLIENTVAR: z.string(),
     // only allow "true" or "false"
     // transform to boolean
-    NEXT_PUBLIC_TEAM_PAGE: z.string().refine((s) => s === "true" || s === "false").transform((s) => s === "true"),
-    NEXT_PUBLIC_JOIN_PAGE: z.string().refine((s) => s === "true" || s === "false").transform((s) => s === "true"),
+    NEXT_PUBLIC_TEAM_PAGE: z
+      .string()
+      .refine((s) => s === "true" || s === "false")
+      .transform((s) => s === "true"),
+    NEXT_PUBLIC_JOIN_PAGE: z
+      .string()
+      .refine((s) => s === "true" || s === "false")
+      .transform((s) => s === "true"),
+    NEXT_PUBLIC_DOMAIN_URL: z.string(),
   },
 
   /**
@@ -31,6 +38,7 @@ export const env = createEnv({
     NODE_ENV: process.env.NODE_ENV,
     NEXT_PUBLIC_TEAM_PAGE: process.env.NEXT_PUBLIC_TEAM_PAGE,
     NEXT_PUBLIC_JOIN_PAGE: process.env.NEXT_PUBLIC_JOIN_PAGE,
+    NEXT_PUBLIC_DOMAIN_URL: process.env.NEXT_PUBLIC_DOMAIN_URL,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   /**

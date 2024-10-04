@@ -5,11 +5,24 @@ import { type Metadata } from "next";
 import { ThemeProvider } from "~/components/theme-provider";
 import { Header } from "~/components/header";
 import { Footer } from "~/components/footer";
+import { env } from "~/env";
 
 export const metadata: Metadata = {
   title: "Props Lab",
   description: "Bet Smarter, Not Harder",
   icons: [{ rel: "icon", url: "/favicons/favicon.ico" }],
+  openGraph: {
+    title: "Props Lab",
+    description:
+      "Bet Smarter, Not Harder | We are a  sports enthusiasts who use cutting-edge technology to provide insights into the world of sports betting.",
+    images: [
+      {
+        // TODO: Update the URL to the correct path once the domain is set up
+        url: `${env.NEXT_PUBLIC_DOMAIN_URL}/static/images/banner/banner_1.png`,
+      },
+    ],
+  },
+  manifest: `${env.NEXT_PUBLIC_DOMAIN_URL}/favicons/manifest.json`,
 };
 
 export default function RootLayout({
