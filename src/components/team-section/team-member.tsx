@@ -10,7 +10,7 @@ export type TeamMemberProps = {
 
 export function TeamMember({
   name,
-  imageSrc = "/static/images/icon/256x256/256x256_white.png",
+  imageSrc = "/static/images/icon/md256/white.png",
   title,
   description,
   className,

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-const LogoLightSrc = "/static/images/footer/footer_white_mini.png";
-const LogoDarkSrc = "/static/images/footer/footer_black_mini.png";
+const LogoLightSrc = "/static/images/icon/xl1024/white_mini.png";
+const LogoDarkSrc = "/static/images/icon/xl1024/black_mini.png";
 
 type PropsLabLogoProps = {
   size?: number;
