@@ -4,11 +4,7 @@ import { cn } from "~/lib/utils";
 import { AnimatedList } from "~/components/ui/animated-list";
 
 export function Feature3() {
-  return (
-    <div className="h-fit max-h-fit w-full max-w-[50vw] p-8">
-      <GiveawayList />
-    </div>
-  );
+  return <GiveawayList />;
 }
 
 interface Item {
@@ -37,6 +33,21 @@ let notifications = [
     image: "/static/images/features/madden.jpeg",
   },
   {
+    name: "Venmo $10",
+    description: "",
+    time: "5m ago",
+    icon: "🤑",
+    color: "#00C9A7",
+  },
+  {
+    name: "FC25",
+    description: "",
+    time: "2m ago",
+    icon: "🎮",
+    color: "#1E86FF",
+    image: "/static/images/features/fc.jpeg",
+  },
+  {
     name: "Cash App $25",
     description: "",
     time: "10m ago",
@@ -52,11 +63,19 @@ let notifications = [
     image: "/static/images/features/psa.jpg",
   },
   {
-    name: "Venmo $10",
+    name: "Paypal $10",
     description: "",
-    time: "5m ago",
-    icon: "🤑",
+    time: "15m ago",
+    icon: "💸",
     color: "#00C9A7",
+  },
+  {
+    name: "2k25",
+    description: "",
+    time: "2m ago",
+    icon: "🎮",
+    color: "#1E86FF",
+    image: "/static/images/features/nba2k.jpeg",
   },
 ];
 
@@ -73,7 +92,7 @@ const Notification = ({
   return (
     <figure
       className={cn(
-        "relative mx-auto min-h-fit w-full max-w-[400px] cursor-pointer overflow-hidden rounded-2xl p-4",
+        "relative mx-auto min-h-fit w-full max-w-[300px] cursor-pointer overflow-hidden rounded-2xl p-4",
         // animation styles
         "transition-all duration-200 ease-in-out hover:scale-[103%]",
         // light styles
@@ -121,11 +140,11 @@ export function GiveawayList({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "relative flex h-[400px] w-full flex-col overflow-hidden rounded-lg border bg-background p-6 md:shadow-xl",
+        "relative flex h-[400px] w-full max-w-[600px] flex-col overflow-hidden rounded-lg border bg-background bg-gradient-to-tr from-slate-900 to-primary/40 p-6 shadow-md shadow-primary",
         className,
       )}
     >
-      <AnimatedList>
+      <AnimatedList className="">
         {notifications.map((item, idx) => (
           <Notification {...item} key={idx} />
         ))}
