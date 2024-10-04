@@ -37,6 +37,21 @@ let notifications = [
     image: "/static/images/features/madden.jpeg",
   },
   {
+    name: "Venmo $10",
+    description: "",
+    time: "5m ago",
+    icon: "🤑",
+    color: "#00C9A7",
+  },
+  {
+    name: "FC25",
+    description: "",
+    time: "2m ago",
+    icon: "🎮",
+    color: "#1E86FF",
+    image: "/static/images/features/fc.jpeg",
+  },
+  {
     name: "Cash App $25",
     description: "",
     time: "10m ago",
@@ -52,11 +67,19 @@ let notifications = [
     image: "/static/images/features/psa.jpg",
   },
   {
-    name: "Venmo $10",
+    name: "Paypal $10",
     description: "",
-    time: "5m ago",
-    icon: "🤑",
+    time: "15m ago",
+    icon: "💸",
     color: "#00C9A7",
+  },
+  {
+    name: "2k25",
+    description: "",
+    time: "2m ago",
+    icon: "🎮",
+    color: "#1E86FF",
+    image: "/static/images/features/nba2k.jpeg",
   },
 ];
 
