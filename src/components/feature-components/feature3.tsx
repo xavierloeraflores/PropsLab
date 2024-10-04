@@ -96,7 +96,7 @@ const Notification = ({
   return (
     <figure
       className={cn(
-        "relative mx-auto min-h-fit w-full max-w-[400px] cursor-pointer overflow-hidden rounded-2xl p-4",
+        "relative mx-auto min-h-fit w-full max-w-[300px] cursor-pointer overflow-hidden rounded-2xl p-4",
         // animation styles
         "transition-all duration-200 ease-in-out hover:scale-[103%]",
         // light styles
@@ -144,11 +144,11 @@ export function GiveawayList({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "relative flex h-[400px] w-full flex-col overflow-hidden rounded-lg border bg-background p-6 md:shadow-xl",
+        "relative flex h-[400px] w-full max-w-[600px] flex-col overflow-hidden rounded-lg border bg-background bg-gradient-to-tr from-slate-900 to-primary/40 p-6 shadow-lg shadow-primary",
         className,
       )}
     >
-      <AnimatedList>
+      <AnimatedList className="">
         {notifications.map((item, idx) => (
           <Notification {...item} key={idx} />
         ))}
