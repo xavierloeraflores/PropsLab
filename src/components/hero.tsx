@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SectionContainer } from "./framer-container";
-import Globe from "./ui/globe/globe";
+// import Globe from "./ui/globe/globe";
+import { WorldGlobe } from "./acernity/WorldGlobe";
 
 export function Hero() {
   return (
@@ -29,7 +30,8 @@ export function Hero() {
         </div>
         <div className="mx-auto w-full flex-1">
           {/* 900 x 650 */}
-          <Globe className="relative" />
+          <WorldGlobe />
+          {/* <Globe className="relative" /> */}
         </div>
       </div>
     </SectionContainer>
