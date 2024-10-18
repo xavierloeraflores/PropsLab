@@ -160,12 +160,12 @@ export function Globe({ globeConfig, data }: WorldProps) {
     if (globeRef.current && globeData) {
       globeRef.current
         .hexPolygonsData(countries.features)
-        .hexPolygonResolution(3)
+        .hexPolygonResolution(2)
         .hexPolygonMargin(0.7)
         .showAtmosphere(defaultProps.showAtmosphere)
         .atmosphereColor(defaultProps.atmosphereColor)
         .atmosphereAltitude(defaultProps.atmosphereAltitude)
-        .hexPolygonColor((e) => {
+        .hexPolygonColor((_e) => {
           return defaultProps.polygonColor;
         });
       startAnimation();
@@ -270,7 +270,7 @@ export function World(props: WorldProps) {
       <pointLight
         color={globeConfig.pointLight}
         position={new Vector3(-200, 500, 200)}
-        intensity={0.8}
+        intensity={1}
       />
       <Globe {...props} />
       <OrbitControls
