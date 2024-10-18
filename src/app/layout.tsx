@@ -17,12 +17,11 @@ export const metadata: Metadata = {
       "Bet Smarter, Not Harder | We are a  sports enthusiasts who use cutting-edge technology to provide insights into the world of sports betting.",
     images: [
       {
-        // TODO: Update the URL to the correct path once the domain is set up
-        url: `${env.NEXT_PUBLIC_DOMAIN_URL}/static/images/banner/banner_1.png`,
+        url: `https://propslab.io/static/images/banner/banner_1.png`,
       },
     ],
   },
-  manifest: `${env.NEXT_PUBLIC_DOMAIN_URL}/favicons/manifest.json`,
+  manifest: `https://propslab.io/favicons/manifest.json`,
 };
 
 export default function RootLayout({
