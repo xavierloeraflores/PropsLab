@@ -4,12 +4,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 // 157 76.7% 48.8
 
+import os from "os";
 import createGlobe, { type COBEOptions } from "cobe";
 import { useEffect, useRef, useState } from "react";
 import { markers } from "./markers";
-
 import { cn } from "~/lib/utils";
 
+const isWindows = os.platform() === "win32";
 const GLOBE_CONFIG: COBEOptions = {
   width: 800,
   height: 800,
@@ -18,15 +19,15 @@ const GLOBE_CONFIG: COBEOptions = {
   },
   devicePixelRatio: 2,
   phi: 0,
-  theta: 0.3,
+  theta: 0.2,
   dark: 1.1,
   diffuse: 0,
-  mapSamples: 8000, //Number of Dots
+  mapSamples: isWindows ? 4000 : 8000, //Number of Dots
   mapBrightness: 1.5,
   baseColor: [1, 1, 1],
   markerColor: [28 / 255, 217 / 255, 144 / 255],
   glowColor: [28 / 255, 217 / 255, 144 / 255],
-  markers: markers,
+  markers: isWindows ? [] : markers,
 };
 
 export default function Globe({
