@@ -5,7 +5,7 @@
 // 157 76.7% 48.8
 
 import createGlobe, { type COBEOptions } from "cobe";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { markers } from "./markers";
 
 import { cn } from "~/lib/utils";
@@ -36,26 +36,23 @@ export default function Globe({
   className?: string;
   config?: COBEOptions;
 }) {
-  let phi = 0;
-  let width = 0;
-  // const [width, setWidth] = useState(0);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  const onRender = useCallback(
-    (state: Record<string, any>) => {
-      phi += 0.005;
-      // if (!pointerInteracting.current) phi += 0.005;
-      state.phi = phi;
-      state.width = width * 2;
-      state.height = width * 2;
-    },
-    [phi, width],
-  );
+  const [onScreen, setOnScreen] = useState(false);
 
   useEffect(() => {
+    let phi = 0;
+    let width = 0;
+    const onRender = (state: Record<string, any>) => {
+      if (onScreen) {
+        phi += 0.005;
+        state.phi = phi;
+        state.width = width * 2;
+        state.height = width * 2;
+      }
+    };
+
     const onResize = () => {
       if (canvasRef.current) {
-        // setWidth(canvasRef.current.offsetWidth);
         width = canvasRef.current.offsetWidth;
       }
     };
@@ -68,11 +65,32 @@ export default function Globe({
       height: width * 2,
       onRender,
     });
-
+    const handleScroll = () => {
+      if (canvasRef.current) {
+        const rect = canvasRef.current.getBoundingClientRect();
+        if (rect.top >= window.innerHeight || rect.bottom <= 0) {
+          if (onScreen) {
+            // console.log("Pausing Globe");
+            setOnScreen(false);
+            globe.toggle(false);
+          }
+        } else {
+          if (!onScreen) {
+            // console.log("Resuming Globe");
+            setOnScreen(true);
+            globe.toggle(true);
+          }
+        }
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
     setTimeout(() => (canvasRef.current!.style.opacity = "1"));
-    return () => globe.destroy();
-    // }, [config, onRender, width, setWidth]);
-  }, [config, onRender, width]);
+    return () => {
+      // console.log("Destroying Globe & Removing Event Listener");
+      window.removeEventListener("scroll", handleScroll);
+      globe.destroy();
+    };
+  }, [config, onScreen]);
 
   return (
     <div
