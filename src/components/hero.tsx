@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { SectionContainer } from "./framer-container";
-import Globe from "./ui/globe";
+import Globe from "./ui/globe/globe";
 
 export function Hero() {
   return (
