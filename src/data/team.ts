@@ -6,11 +6,13 @@ const member1: TeamMemberProps = {
   title: "Professor Props",
   description: "Founder of Props Lab",
   imageSrc: "/static/images/team/ryan.jpg",
+  sports: ["Football", "Basketball", "Baseball", "Hockey", "Soccer"],
 };
 const member2: TeamMemberProps = {
   name: "Team Member",
   title: "Role",
   description: "Description",
+  sports: ["Football", "Esports", "Baseball"],
 };
 
 export const TeamCollectionData: TeamCollectionProps = {
