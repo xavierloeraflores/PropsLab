@@ -14,9 +14,11 @@ export function FeatureSectionDescription({
 }: FeatureSectionDescriptionProps & { className?: string }) {
   return (
     <div className={cn("flex flex-col justify-center gap-4", className)}>
-      <div className="text-sm font-bold text-primary">{subtitle}</div>
-      <div className="text-3xl font-bold">{title}</div>
-      <div className="max-w-[700px] text-gray-300">{description}</div>
+      <div className="text-md font-bold text-primary lg:text-lg">
+        {subtitle}
+      </div>
+      <div className="text-4xl font-bold">{title}</div>
+      <div className="text-md max-w-[700px] text-gray-100">{description}</div>
     </div>
   );
 }
