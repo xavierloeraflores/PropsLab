@@ -5,7 +5,7 @@ import { type Metadata } from "next";
 import { ThemeProvider } from "~/components/theme-provider";
 import { Header } from "~/components/header";
 import { Footer } from "~/components/footer";
-import { env } from "~/env";
+import { Socials } from "~/components/socials";
 
 export const metadata: Metadata = {
   title: "Props Lab",
@@ -40,6 +40,7 @@ export default function RootLayout({
           <main className="mt-16 flex flex-col items-center justify-center sm:mt-24">
             {children}
           </main>
+          <Socials />
           <Footer />
         </ThemeProvider>
       </body>
