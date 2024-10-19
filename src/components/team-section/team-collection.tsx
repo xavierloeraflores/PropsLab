@@ -11,7 +11,7 @@ export function TeamCollection({
   return (
     <div
       className={cn(
-        "mx-auto grid gap-8 py-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4",
+        "mx-auto grid gap-16 py-12 sm:grid-cols-2 md:grid-cols-3 lg:gap-24",
         className,
       )}
     >
