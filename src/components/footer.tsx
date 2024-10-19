@@ -4,7 +4,6 @@ import { Separator } from "./ui/separator";
 import { env } from "~/env";
 
 const teamPageFlag = env.NEXT_PUBLIC_TEAM_PAGE;
-const joinPageFlag = env.NEXT_PUBLIC_JOIN_PAGE;
 
 export function Footer() {
   return (
@@ -24,24 +23,13 @@ export function Footer() {
               About the Team
             </Link>
           )}
-          {joinPageFlag ? (
-            <Link
-              href="/join"
-              className="text-sm font-medium underline-offset-4 hover:underline"
-              prefetch={false}
-            >
-              Join Now
-            </Link>
-          ) : (
-            <Link
-              href="https://whop.com/marketplace/props-lab/"
-              className="text-md inline-flex h-10 max-w-[600px] items-center justify-center rounded-md bg-primary px-8 font-bold text-primary-foreground underline-offset-4 shadow-md shadow-primary/80 transition-colors hover:bg-primary/90 hover:underline focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-              prefetch={false}
-              target="_blank"
-            >
-              Join Now
-            </Link>
-          )}
+
+          <Link
+            href="/join"
+            className="text-md inline-flex h-10 max-w-[600px] items-center justify-center rounded-md bg-primary/80 px-8 font-bold text-primary-foreground shadow-md shadow-primary/80 transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+          >
+            Join Now
+          </Link>
         </nav>
         <p className="text-sm text-muted-foreground">
           &copy; 2024 Props Lab. All rights reserved.
