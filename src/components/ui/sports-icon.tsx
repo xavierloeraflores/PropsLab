@@ -21,7 +21,7 @@ export function SportIcon({
   name,
   className = "",
 }: SportSymbolProps & { className?: string }) {
-  const isInList: Boolean =
+  const isInList: boolean =
     [
       "football",
       "basketball",
