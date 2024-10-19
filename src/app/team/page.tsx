@@ -1,19 +1,8 @@
-"use client";
 import { SectionContainer } from "~/components/framer-container";
 import { TeamCollection } from "~/components/team-section/team-collection";
 import { TeamCollectionData } from "~/data/team";
 
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
-import { env } from "~/env";
-
-const teamPageFlag = env.NEXT_PUBLIC_TEAM_PAGE;
 export default function AboutTheTeam() {
-  const router = useRouter();
-  useEffect(() => {
-    if (!teamPageFlag) router.push("/");
-  }, [router]);
-
   return (
     <SectionContainer>
       <div className="container flex flex-col px-4 md:px-6">
