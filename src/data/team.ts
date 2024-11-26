@@ -2,8 +2,8 @@ import { type TeamCollectionProps } from "~/components/team-section/team-collect
 import { type TeamMemberProps } from "~/components/team-section/team-member";
 
 const Ryan: TeamMemberProps = {
-  name: "Ryan Tran",
-  title: "Professor Props",
+  name: "Professor Props",
+  title: "Founder",
   description: "Founder of Props Lab",
   imageSrc: "/static/images/team/ryan.jpeg",
   sports: ["Football", "Basketball", "Baseball", "Hockey", "Soccer"],
