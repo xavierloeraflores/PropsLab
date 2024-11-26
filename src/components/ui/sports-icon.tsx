@@ -15,11 +15,13 @@ import { FaRegStar } from "react-icons/fa";
 type SportSymbolProps = {
   name: string;
   className?: string;
+  iconClassName?: string;
 };
 
 export function SportIcon({
   name,
   className = "",
+  iconClassName = "",
 }: SportSymbolProps & { className?: string }) {
   const isInList: boolean =
     [
@@ -31,30 +33,31 @@ export function SportIcon({
       "esports",
       "mma",
     ].includes(name.toLowerCase()) || false;
+  const iconStyles = cn("h-6 w-6", iconClassName);
   return (
     <div className={cn("", className)}>
       {name.toLowerCase() === "football" && (
-        <MdOutlineSportsFootball className="h-6 w-6" />
+        <MdOutlineSportsFootball className={iconStyles} />
       )}
       {name.toLowerCase() === "basketball" && (
-        <MdOutlineSportsBasketball className="h-6 w-6" />
+        <MdOutlineSportsBasketball className={iconStyles} />
       )}
       {name.toLowerCase() === "baseball" && (
-        <MdOutlineSportsBaseball className="h-6 w-6" />
+        <MdOutlineSportsBaseball className={iconStyles} />
       )}
       {name.toLowerCase() === "hockey" && (
-        <MdOutlineSportsHockey className="h-6 w-6" />
+        <MdOutlineSportsHockey className={iconStyles} />
       )}
       {name.toLowerCase() === "soccer" && (
-        <MdOutlineSportsSoccer className="h-6 w-6" />
+        <MdOutlineSportsSoccer className={iconStyles} />
       )}
       {name.toLowerCase() === "esports" && (
-        <MdOutlineSportsEsports className="h-6 w-6" />
+        <MdOutlineSportsEsports className={iconStyles} />
       )}
       {name.toLowerCase() === "mma" && (
-        <MdOutlineSportsMartialArts className="h-6 w-6" />
+        <MdOutlineSportsMartialArts className={iconStyles} />
       )}
-      {isInList === false && <FaRegStar className="h-6 w-6" />}
+      {isInList === false && <FaRegStar className={iconStyles} />}
     </div>
   );
 }

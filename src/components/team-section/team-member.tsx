@@ -29,13 +29,20 @@ export function TeamMember({
           height={256}
         />
       </div>
-      <div className="space-y-1">
-        <h3 className="text-lg font-semibold">{name}</h3>
-        <p className="text-muted-foreground">{title}</p>
-        <p className="text-sm text-muted-foreground">{description}</p>
+      <div className="flex flex-col items-center space-y-1">
+        <h3 className="text-center text-lg font-semibold">{name}</h3>
+        <p className="text-center text-muted-foreground">{title}</p>
+        {/* <p className="text-sm text-muted-foreground">{description}</p> */}
         <div className="flex justify-center space-x-2 text-primary">
           {sports.map((sport, index) => {
-            return <SportIcon name={sport} key={index} className="h-6 w-6" />;
+            return (
+              <SportIcon
+                name={sport}
+                key={index}
+                className="flex h-8 w-8 items-center justify-center"
+                iconClassName="h-8 w-8"
+              />
+            );
           })}
         </div>
       </div>
