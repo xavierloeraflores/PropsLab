@@ -3,7 +3,7 @@ import { Users, Zap, Heart } from "lucide-react";
 export function WhyJoin() {
   return (
     <div className="mt-8 space-y-4">
-      <h3 className="text-center text-2xl font-semibold">
+      <h3 className="mb-16 text-center text-3xl font-semibold">
         Why Join Our Community?
       </h3>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
@@ -31,13 +31,14 @@ function WhyJoinReason({
   title: string;
   description: string;
 }) {
+  const iconClassName = "h-16 w-16 text-primary mb-4";
   return (
     <div className="flex flex-col items-center space-y-2 text-center">
-      {title === "Connect" && <Users className="h-8 w-8 text-primary" />}
-      {title === "Learn" && <Zap className="h-8 w-8 text-primary" />}
-      {title === "Grow" && <Heart className="h-8 w-8 text-primary" />}
-      <h4 className="font-semibold">{title}</h4>
-      <p className="text-sm text-primary-foreground">{description}</p>
+      {title === "Connect" && <Users className={iconClassName} />}
+      {title === "Learn" && <Zap className={iconClassName} />}
+      {title === "Grow" && <Heart className={iconClassName} />}
+      <h4 className="text-xl font-semibold">{title}</h4>
+      <p className="text-md text-primary-foreground/80">{description}</p>
     </div>
   );
 }

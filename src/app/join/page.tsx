@@ -7,14 +7,14 @@ export default function JoinPage() {
     <SectionContainer>
       <div className="container flex flex-col px-4 md:px-6">
         <div className="mb-8 flex flex-col items-center justify-center space-y-4 text-center lg:mb-16">
-          <div className="space-y-4">
+          <div className="space-y-8">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
               <TextGenerateRaw
                 words="Join Today!"
                 className="text-3xl font-bold tracking-tighter sm:text-5xl"
               />
             </h2>
-            <p className="max-w-[700px] text-primary-foreground md:text-lg/relaxed lg:text-xl/relaxed xl:text-2xl/relaxed">
+            <p className="max-w-[700px] text-primary-foreground/90 md:text-lg/relaxed lg:text-xl/relaxed xl:text-2xl/relaxed">
               Engage non-stop! Join our vibrant community, active day and night,
               for lively conversations and shared excitement!
             </p>
