@@ -7,7 +7,7 @@ const teamPageFlag = env.NEXT_PUBLIC_TEAM_PAGE;
 
 export function Footer() {
   return (
-    <footer className="flex w-full flex-col justify-between bg-muted py-6 md:py-12">
+    <footer className="flex w-full flex-col justify-between py-6 dark:bg-black md:py-12">
       <div className="container flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
         <Link href="/" className="flex items-center gap-2" prefetch={false}>
           <PropsLabLogo />
