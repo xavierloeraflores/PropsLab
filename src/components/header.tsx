@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
           <FullLogo size={48} />
         </Link>
       </div>
-      <div className="ml-auto flex flex-row items-center gap-12 p-4">
+      <div className="ml-auto flex flex-row items-center gap-4 p-4 md:gap-8 lg:gap-12">
         <Link href="/team" className="text-md font-bold">
           Team
         </Link>
