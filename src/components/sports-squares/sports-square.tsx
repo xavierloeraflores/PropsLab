@@ -14,13 +14,14 @@ export default function SportsSquare({
   return (
     <Card
       className={cn(
-        "flex aspect-square w-32 flex-col items-center justify-center bg-gradient-to-br from-black to-primary/20 shadow-sm shadow-primary transition-shadow duration-300 hover:shadow-xl hover:shadow-primary",
+        "flex aspect-square w-36 flex-col items-center justify-center bg-gradient-to-br from-black to-primary/20 shadow-sm shadow-primary transition-shadow duration-300 hover:shadow-xl hover:shadow-primary",
         className,
       )}
     >
       <div className="mb-4 flex aspect-square w-12 flex-col items-center justify-center rounded-full bg-black shadow-sm shadow-primary">
         <span className="text-center text-6xl text-primary sm:text-7xl md:text-8xl">
           <SportIcon
+            iconClassName="h-8 w-8"
             name={name === "E-Sports" ? "esports" : name.toLowerCase()}
           />
         </span>
