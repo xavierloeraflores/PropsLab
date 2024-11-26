@@ -2,10 +2,8 @@
 // import { useEffect, useState } from "react";
 import Link from "next/link";
 import { FullLogo } from "./FullLogo";
-import { env } from "~/env";
 // import { usePathname } from "next/navigation";
 
-const teamPageFlag = env.NEXT_PUBLIC_TEAM_PAGE;
 export const Header: React.FC = () => {
   // const pathname = usePathname();
   // const [isJoinPage, setIsJoinPage] = useState(false);
@@ -20,16 +18,17 @@ export const Header: React.FC = () => {
           <FullLogo size={48} />
         </Link>
       </div>
-      <div className="ml-auto flex flex-row gap-4 p-4">
-        {teamPageFlag && <Link href="/team">About the Team</Link>}
-        {/* {!isJoinPage && ( */}
+      <div className="ml-auto flex flex-row items-center gap-12 p-4">
+        <Link href="/team" className="text-md font-bold">
+          Team
+        </Link>
+
         <Link
           href="/join"
           className="text-md inline-flex h-10 max-w-[600px] items-center justify-center rounded-md bg-primary/80 px-8 font-bold text-primary-foreground shadow-md shadow-primary/80 transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
         >
           Join Now
         </Link>
-        {/* )} */}
       </div>
     </header>
   );
