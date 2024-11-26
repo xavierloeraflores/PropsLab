@@ -35,7 +35,14 @@ export function TeamMember({
         {/* <p className="text-sm text-muted-foreground">{description}</p> */}
         <div className="flex justify-center space-x-2 text-primary">
           {sports.map((sport, index) => {
-            return <SportIcon name={sport} key={index} className="h-8 w-8" />;
+            return (
+              <SportIcon
+                name={sport}
+                key={index}
+                className="flex h-8 w-8 items-center justify-center"
+                iconClassName="h-8 w-8"
+              />
+            );
           })}
         </div>
       </div>
