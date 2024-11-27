@@ -14,7 +14,7 @@ const Collin: TeamMemberProps = {
   title: "Analyst",
   description: "",
   imageSrc: "/static/images/team/collin.jpeg",
-  sports: ["Esports", "BasketBall", "Esports"],
+  sports: ["Esports", "BasketBall", "Football"],
 };
 const Leech: TeamMemberProps = {
   name: "sT Leech",
