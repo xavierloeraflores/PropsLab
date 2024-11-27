@@ -25,7 +25,7 @@ const Leech: TeamMemberProps = {
 };
 const Dru: TeamMemberProps = {
   name: "Dru",
-  title: "Analyst",
+  title: "Co-Founder",
   description: "",
   imageSrc: "/static/images/team/dru.jpg",
   sports: ["Basketball", "Baseball", "Football"],
@@ -73,8 +73,8 @@ export const TeamCollectionData: TeamCollectionProps = {
   members: [
     Ryan,
     LockMan,
-    Collin,
     Dru,
+    Collin,
     Leech,
     JustSamuel,
     VuuTang,
