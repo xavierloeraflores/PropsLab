@@ -37,7 +37,7 @@ export default function JoinPage() {
             </Link>
             <br />
             <Link
-              href="https://whop.com/marketplace/props-lab/"
+              href="https://discord.com/invite/propslab"
               className="mt-8 block inline-flex h-16 max-w-[600px] items-center justify-center rounded-md bg-purple-700 px-8 text-xl font-bold text-primary-foreground underline-offset-4 shadow-sm shadow-primary/50 transition-shadow duration-300 hover:bg-purple-700/80 hover:shadow-lg hover:shadow-purple-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
               prefetch={false}
               target="_blank"
