@@ -2,10 +2,10 @@ import { type TeamCollectionProps } from "~/components/team-section/team-collect
 import { type TeamMemberProps } from "~/components/team-section/team-member";
 
 const Ryan: TeamMemberProps = {
-  name: "Ryan Tran",
-  title: "Professor Props",
+  name: "Professor Props",
+  title: "Founder",
   description: "Founder of Props Lab",
-  imageSrc: "/static/images/team/ryan.jpeg",
+  imageSrc: "/static/images/team/ryan.jpg",
   sports: ["Football", "Basketball", "Baseball", "Hockey", "Soccer"],
 };
 
@@ -22,6 +22,13 @@ const Leech: TeamMemberProps = {
   description: "",
   imageSrc: "/static/images/team/leech.jpeg",
   sports: ["Basketball", "Football", "Esports"],
+};
+const Dru: TeamMemberProps = {
+  name: "Dru",
+  title: "Analyst",
+  description: "",
+  imageSrc: "/static/images/team/dru.jpg",
+  sports: ["Basketball", "Baseball", "Football"],
 };
 const JustSamuel: TeamMemberProps = {
   name: "JustSamuel",
@@ -63,5 +70,15 @@ const Alex: TeamMemberProps = {
 };
 
 export const TeamCollectionData: TeamCollectionProps = {
-  members: [Ryan, LockMan, Collin, Leech, JustSamuel, VuuTang, Spectade, Alex],
+  members: [
+    Ryan,
+    LockMan,
+    Collin,
+    Dru,
+    Leech,
+    JustSamuel,
+    VuuTang,
+    Spectade,
+    Alex,
+  ],
 };

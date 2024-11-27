@@ -18,14 +18,14 @@ export const Header: React.FC = () => {
           <FullLogo size={48} />
         </Link>
       </div>
-      <div className="ml-auto flex flex-row items-center gap-12 p-4">
+      <div className="ml-auto flex flex-row items-center gap-4 p-4 md:gap-8 lg:gap-12">
         <Link href="/team" className="text-md font-bold">
           Team
         </Link>
 
         <Link
           href="/join"
-          className="text-md inline-flex h-10 max-w-[600px] items-center justify-center rounded-md bg-primary/80 px-8 font-bold text-primary-foreground shadow-md shadow-primary/80 transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+          className="text-md inline-flex h-10 max-w-[600px] items-center justify-center rounded-md bg-primary/80 px-4 font-bold text-primary-foreground shadow-md shadow-primary/80 transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring md:px-8"
         >
           Join Now
         </Link>
